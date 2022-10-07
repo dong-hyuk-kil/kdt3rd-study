@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .mypw:focus {
+            background-color: lightblue;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form action="">
+
+        <!-- 
+            폼
+            1. 폼에 입력한 정보를 서버로 보내서 서버측에서 데이터를 활용
+            2. 사용자의 입력을 받아서 프론트 측에서 활용
+         -->
+         <input type="text" value="default value"> <br>
+         <input type="password"><br>
+         <input type="number"><br>
+         <input type="range"><br>
+         <input type="color"><br>
+         <input type="email"><br>
+         <input type="file"><br>
+         <input type="date"><br>
+        
+         <input type="checkbox" name="fruits" id="apple">사과
+         <input type="checkbox" name="fruits" id="orange">오렌지
+         <input type="checkbox" name="fruits" id="banana">바나나
+         <br>
+         <textarea cols="50" rows="5"></textarea>
+         <select name="number" >
+            <option value="1">one</option>
+            <option value="2" selected>two</option>
+            <option value="3">three</option>
+            
+         </select>
+
+
+         <button type="submit">submit</button>
+         <button type="button">submit</button>
+    </form>
+
+    <button type="button">button</button>
+    <hr>
+    <h2>label 태그</h2>
+    <form>
+        <label for="username">username</label>
+        <input type="text" id="username">
+        <br>
+        <label for="password">password</label>
+        <input type="password" id="password">
+
+        <input type="checkbox" name="food" id="gimbap">
+        <label for="gimbap">김밥</label>
+        <input type="checkbox" name="food" id="pasta">
+        <label for="pasta">파스타</label>
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" placeholder="id@host">
+        <br>
+        <label for="password" >패스워드</label>
+        <input class="mypw" type="password" id="password" placeholder="5자리 이상 특수 기호 금지">
+        <hr>
+        <br>
+        <br>
+        <br>
+
+        <label for="username">아이디</label>
+        <input type="text" id="username" placeholder="abc123"> <br>
+        <label for="password">password</label>
+        <HR></HR>
+        <input type="password" id="password"><br>
+        <input type="radio" name="라면">
+        <label for="라면">신라면</label>
+        <input type="radio" name="라면">
+        <label for="라면">너구리</label>
+        <input type="radio" name="라면">
+        <label for="라면">삼양라면</label>
+        <input type="radio" name="라면">
+        <label for="라면">진라면</label>
+        <input type="radio" name="라면">
+        <label for="라면">짜파게티</label>
+
+
+    </form>
+
+</body>
+</html>

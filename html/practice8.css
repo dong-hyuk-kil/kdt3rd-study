@@ -1,0 +1,33 @@
+.container {
+    background-color: #bbb;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+img {
+
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    transform: skewy(30deg);
+
+}
+
+.beach1 {
+    top: 180px;
+    left: 200px;
+    z-index: 3;
+
+}
+.beach2 {
+    top: 150px;
+    left: 350px;
+    z-index: 2;
+}
+.beach3 {
+    top: 120px;
+    left: 500px;
+    z-index: 1;
+}
+

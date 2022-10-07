@@ -1,0 +1,49 @@
+div{
+    color:royalblue;
+    background-color: pink;
+    background: linear-gradient(to bottom right, yellow, pink);
+
+    font-size: 100%;
+    font-weight:lighter;
+    font-family:Georgia, "malgen Gothic";
+    width: 399px;
+    height: 399px;
+    /* width, height 같게 하고 border-radius 50%하면 원 만들기 효과 */
+
+    border-style:solid;
+    border-width:4px;
+    border-color:limegreen;
+    border-radius: 5px 30px 45px 80px; 
+    /* 꼭지점 둥글게 하는 효과 */
+    /* 11시, 1시 5시 7시 방향 순서 */
+
+    /* 3가지 자주 쓰이는거 단축기 : 선언 순서 : border, width, style, color 한 번에 설정 가능 */
+
+    /* border-top: 10px solid limegreen */
+
+    border:5px dashed powderblue;
+    
+    box-sizing:border-box;
+    padding:20px 50px;
+    margin:100px;
+    box-shadow: 10px 10px 10px red;
+    text-shadow: 1px 1px 2px blue;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+  
+h1{
+    font-family: "Jua", sans-serif;
+    font-style: oblique;
+}
+    
+
+p{ 
+    border:5px solid blue
+}
+
+
+

@@ -1,0 +1,33 @@
+p {
+   
+    
+  /* margin-left: 25%; */
+  width: 100%;
+    background-color: cyan;
+  
+    position: relative;
+    animation-name: moveX;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: linear;
+    
+    /* animation-direction: alternate; */
+	
+}
+	
+
+
+
+@keyframes moveX {
+
+    from {
+        margin-left:100%;
+        width:300%
+      }
+    
+      to {
+       margin-left:0%;
+       width:100%;
+     }
+
+}

@@ -1,0 +1,45 @@
+body {
+    padding-bottom:500px
+}
+
+.d-inline1 {
+    background-color: red;
+    display: inline;
+}
+
+.d-inline2 {
+    display: inline;
+    background-color: blue;
+}
+
+.d-block1 {
+    background-color: red;
+    display: block;
+    width: 12000px;
+    height: 200px;
+    padding: 10px 30px;
+}
+
+.d-block2 {
+    background-color: blue;
+    display: block;
+}
+
+.d-inline-block1 {
+    background-color: red;
+    display: inline-block;
+}
+.d-inline-block2 {
+    background-color: blue;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.d-none {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: none;
+}

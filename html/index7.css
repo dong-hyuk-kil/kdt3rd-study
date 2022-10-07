@@ -1,0 +1,13 @@
+.parent {
+    width: 400px;
+    height: 100px;
+    background-color: skyblue;
+    /* overflow: hidden; */
+    /* overflow:scroll; */
+    /* overflow: visible; */
+    /* overflow: auto; */
+    /* auto는 넘칠 때만 스크롤을 그려준다.  */
+    /* overflow-y: auto; */
+    
+
+}

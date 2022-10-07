@@ -1,0 +1,143 @@
+/* *{
+    color:black;
+}
+
+li{
+    color:red;
+}
+
+.orange{
+    color:rgb(251,149,16);
+}
+#orange {
+    color:blue;
+
+}
+
+div.orange {
+    color:rgb(138,75,2);
+} */
+
+
+/* ul,
+p,
+.orange{
+    color:green;
+} */
+
+/* 
+하위 : A B
+자식 : A>B
+인접형제 a+B
+일반형제 a~b
+
+*/
+
+/* div.orange {
+    color: blue;
+}
+
+div.orange{
+    color:orange;
+} */
+/* /* 
+ul>.orange{
+    color:red;
+} */
+
+/* ul + .orange {
+    color:green;
+}
+
+ul + span.orange  {
+    color:green;
+}
+
+div.orange ~ span {
+    color:royalblue;
+}
+
+div.orange ~ ul {
+    color:royalblue;
+} */ */
+
+* {
+    color:blue;
+}
+
+#google:hover {
+    font-weight: 700px;
+    color: orangered;
+}
+
+/* 호버 요소에 마우스 올라가 있는 동안 변화를 일으킴 */
+
+#naver:active {
+    font-weight: 700px;
+    color:palegoldenrod;
+}
+
+/* 액티브 클릭하는 동안 변화 */
+
+#daum:visited {
+    color:grey;
+}
+
+/* visited 방문한 경험이 있을 때 효과를 줌 */
+
+
+/* .fruits span:first-child {
+    color:red
+}
+
+.fruits h3:last-child {
+    color:red;
+}
+
+.fruits *:nth-child(2n-1) {
+    color: green; */
+
+
+.fruits *:not(span) {
+    color :blue;
+}
+
+.numbers {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* .numbers span:nth-child(odd) {
+    color:green;
+}
+
+.numbers span:nth-child(even){
+    color: red;
+} */
+
+.numbers span:nth-child(3n+4) {
+    color: blue;
+}
+
+.test {
+
+font-size: 24px;
+font-weight: 700;
+}
+
+.test * {
+color: grey;
+}
+
+.test span {
+    color: blue  !important;
+}
+
+.test span {
+    color: green;
+}
+
+.test #two {
+    color: violet;
+}
+

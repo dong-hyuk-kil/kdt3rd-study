@@ -1,0 +1,47 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-color: aliceblue;
+
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+.position-static {
+    background-color: pink;
+}
+
+.position-relative {
+    background-color: aquamarine;
+    position:relative;
+    /* left: 100px; */
+    
+}
+
+.position-absolute {
+    background-color: gold;
+    position:absolute;
+    bottom: 0;
+    
+
+    
+}
+
+.position-fixed {
+    background-color: coral;
+    position:fixed;
+    bottom:0;
+
+}
+
+
+
