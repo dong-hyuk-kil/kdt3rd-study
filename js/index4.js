@@ -1,331 +1,138 @@
-console.log('connected!')
+console.log('!')
 
-//조건문
-//어떤 조건에 따라 논리 구조를 분기(나눔)
-//->조건에 따라 서로 다른 문장을 실행
+// document 요소 다루기 (읽고 쓰기)
 
-//연산자
-//동등 연산자: ==,!=
-console.log(1 == 1);
-console.log(1 == 2 );
-console.log(1 != 1 );
-console.log(1 != 2 );
+// 1. html 요소 내용(content)을 읽고 쓰기
+let div1 = document.getElementById('div1');
+console.log('div1');
 
-console.log('1' == 1 );
-console.log('2' != 1);
-//==. !=: 타입(자료형)이 달라도 괜찮음! 값만 비교
+//innerHTML 속성
+// : 요소 안의 "코드"를 가져오거나 수정
+console.log(div1.innerHTML);
+div1.innerHTML = '여기는 <b>첫번째 /<b> 태그입니다. &hearts;'
 
-console.log(1 === 1);
-console.log(1 === 2 );
-console.log(1 !== 1 );
-console.log(1 !== 2 );
-
-console.log('1' === 1 );
-console.log('2' !== 1);
+// innnerText 속성
+// 요소 안의 "텍스트를" 가져오거나 수정
+// => 입력된 문자열을 그대로!!
+// 읽기: 요소.innerText
+// 쓰기: 요소.innerText = 수정하려는 텍스트
+console.log(div1.innerText); //읽기
+div1.innerText = '여기는 <b>첫번째 /<b> 태그입니다. &hearts;'
+div1.innerText = '안녕하세요';
 
 
-//비교 연산자
-//>, <, >=, <=
-console.log('---');
-console.log(2>1);
-console.log(2<1);
-console.log(1>=1);
-console.log(1<=1);
+// textcontent 속성
+// : innerText와 마찬가지로 텍스트 정보를 표시
+// console.log(div1.textContent); //읽기
+// div1.textContent = '안녕하세요2222!!!!!';
 
-//논리 연산자
-//&& : and
-//||:or
-//!:not
+// let div2 = document.getElementById('div2');
+// console.log(div2);
 
-console.log(true && true);
-console.log(true && false);
-console.log(false && true);
-console.log(false && false);
-console.log(true || true);
-console.log(true || false);
-console.log(false || true);
-console.log(false ||  false);
-console.log(!true);
-console.log(!false);
-console.log(!!false);
-
-console.log('---')
-console.log((2 > 1) && (-2 < 1));
-console.log((2 > 1) && (-2 < 1) || (5 > 2));
+// div2.innerHTML = '여기는 <b>첫번째 /<b> 태그입니다. &hearts;'
+// console.log(div2.innerHTML);
+// // 2. 속성, 접근
+// // 요소. 속성명
+// 2
+let beach = document.getElementById('beach');
+console.log(beach);
+console.log(beach.id);
+console.log(beach.src);
+console.log(beach.width);
+console.log(beach.alt);
+let google = document.getElementById('google');
+console.log( document.getElementById('google'));
+// console.log(google.href);
 
 
-//=====================================================
+// console.log(google.setAtrribute('href', 'https://www.naver.com'));
 
-if (5 > 3) {
-    console.log('bigger!')
-}
+// console.log(beach.getAtrribute('src','JAVASCRIPT_OBJECT\drink6.jpg' ))
+// beach.setAttribute('src','JAVASCRIPT_OBJECT\drink6.jpg');
 
+// 3. 스타일(css) 제어
+// : javascript로 css 설정 가능!
 
-function isBig() {
-    if (5 > 3) {
-        return 'bigger';
-    }
-}
-console.log(isBig());
+let h1 = document.querySelector('h1');
+// console.log(h1);
+// console.log(h1.style);
+// console.log(h1.style.fontSize);
 
-//if-else
+// h1.style.color = 'limegreen'
+// h1.style.backgroundColor = 'skyblue';
+// h1.style.border = '4px solid brown';
+// h1.style.textShadow = '2px 2px 10px #f005';
 
+let lis = document.querySelectorAll('li');
+// console.log(lis);
+// // 반복문을 이용해서 여러 요소 스타일을 한번에 설정
+// for (let i=0;i < lis.length;i++) {
+//     console.log(lis[i]);
+//     lis[i].style.color = 'rgb(0,100,200)';
+//     lis[i].style.fontSize = '20px';
+//     lis[i].style.backgroundColor = '#ddd';
 
-if ( 5 > 3) {
-    console.log('bigger');
-} else {
-    console.log('smaller..');
-}
+// }
 
-//if-else if
-//else if 키워드 : 여러 개 가능
-
-if ( 5 < 3) {
-    console. log('smaller..')
-} else if (5 > 3 ) {
-    console.log('bigger!1')
-} else if ( 5 == 3) {
-    console.log('same')
-}
-
-if ( 5 < 3) {
-    console. log('smaller..')
-} else if (5 > 3 ) {
-    console.log('bigger!1')
-} else {
-    console.log('same');
-}
-
-// 퀴즈
-let score = 30;
-//90 이상이면 A 
-//80 이상이면 B
-//70 이상이면 C 
-//60 이상이면 D 
-//50 미만이면 E 
-
-if ( score >= 90) {
-    console.log('A');
-} else if (score >= 80) {
-    console.log('B');
-} else if (score >= 70) {
-    console.log('C');
-} else if (score >= 60) {
-    console.log('D');
-} else {
-    console.log('F')
-}
-
-let usrId = 'user';
-let usrPw = '1234';
-let inputId = 'user';
-let inputPw = '1234';
-
-if ( usrId == inputId) {
-   //조건문 중첩
-    if (usrPw == inputPw) {
-        console.log(`${usrId}님 하이`);
-        console.log(usrId,'님 하이')
-    } else {
-        console.log('비밀번호 틀림')
-    }
-
-} else {
-    console.log('아이디 없음');
-}
-
-//step1.
-var num = 6;
-if (num%2 == 0 ) {
-    console.log("짝수");
-} else {
-    console.log("홀수")
-}
-
-//step2.
-
-function isEven(x) {
-    if(x%2 == 0) {
-    return true;
-} else {
-    return false;
-}
-}
-
-
-console.log(isEven(2))
-
-// ======================================
-// Q. 바로 위에 문제에서 조건 추가!!
-// 비밀번호 확인 조건이 추가되었습니다.
-// - pw1은 길이가 5 이상이고 8이 이하라면,
-//      - pw1과 pw2가 같다면, ''비밀번호 일치~' 반환
-//      - pw1과 pw2가 같지 않다면, ''비밀번호 불일치..' 반환
-// - pw1의 길이가 5 미만이거나 8 초과라면, '비밀번호는 5자리 이상 8자리 이하!!!' 반환
-function isValidate2(pw1,pw2) {
-    if(pw1.length >=5 && pw1.length <=8) {
-        if(pw1 == pw2) {
-            return '비밀번호 일치~'
-
-        } else {
-            return '비밀번호 불일치..'
-        }
-
-        
-    } else {
-        return '비밀번호는 5자리 이상 8자리 이하!!!'
-    }
-    // 함수 내부 채워주세요.
-}
-console.log(isValidate2('1234','4567'));
-console.log(isValidate2('123456789', '123456789'))
-console.log(isValidate2('12345', '12345'));
-console.log(isValidate2('12345', '12345!!'));
-
+// // for....of 반복문 
+// const mylists = ['a', 'b', 'c', 'd'];
+// for (let list of mylists) {
+//     console.log(list);
    
-   // 브라우저 콘솔창 확인 결과
-//    isValidate2('1234', '1234'); // '비밀번호는 5~8자리만 가능!!!'
-   // isValidate2('123456789', '123456789'); // '비밀번호는 5~8자리만 가능!!!'
-   // isValidate2('12345', '12345'); // '비밀번호 일치~'
-   // isValidate2('12345', '12345!!'); // '비밀번호 불일치..'
+// }
 
+// for(let li of lis) {
+//     console.log(li);
+//     li.style.color = 'rgb(0,100,200';
+//     li.style.fontSize = '20px';
+//     li.style.backgroundColor = '#ddd'
+// }
 
-   //============================================================
-   //switch 문
-   //-하나 이상의 case 문으로 구성
-   //-default 문이 있는데 필수는 아님 -> 작성 권장
-   //-break 키워드 : 블록(중괄호, {})을 빠져나갈 때 사용하는 키워드
+// 3-2 클래스 제어 방식
 
+console.log(h1);
+console.log(h1.classList.add('header-color'));
+console.log(h1.classList);
 
-   /*
+for (let i=0; i < lis.length;i++) {
+    console.log(lis[i]);
+    lis[i].classList.add('list-style')
 
-switch 문의 기본 구조
-switch(x) {
-    case 값:// if (x === 값)
-    break; // x가 값과 같을 때의 문장을 실행 -> 블록을 빠져나옴
+    
 }
-    case 값2: // if(x === 값2)
-        // x가 값2와 같을 때 실행할 문장
-        break; // x가 값2와 같을 때의 문장을 실행 -> 블록을 빠져나옴
-    default: //else
-        // x가 case에 있는 어떤 것과도 일치하지 않았을 때 실행할 문장
-        break; // 블록을 빠져나옴
+console.log(h1.classList);
+h1.classList.remove('title');
+console.log(h1.classList);
+h1.classList.toggle('happy');
+h1.classList.toggle('happy');
 
-   */
+// contains()
+console.log(h1.classList.contains('header-color'))
+console.log(h1.classList.contains('lucky'))
 
+/////
 
-    let a = 2+2;
-    switch(a) {
-        case 4:
-            console.log('비교하려는 값과 일치합니다.');
-            break;
-        case 5 :
-            console.log('비교하려는 값보다 큽니다.');
-            break;
-           default:
-            console.log('어떤 값인지 파악 안됨');
-            break;
-    }
-    let b = 3+3;
-    switch(b) {
-        case 6:
-            console.log('비교하려는 값과 일치');
-            break;
-        case 7:
-            console.log('비교하려는 값보다 큽니다.');
-            break;
-            default:
-                console.log('어떤 값인지 파악 안됨');
-            break;
-    }
+const apple = document.querySelector('li')
+const fruits = document.querySelector('ul')
 
-    if(a === 3) {
-        console.log('비교하려는 값보다 작습니다.');
+console.log(apple.parentElement);
+console.log(apple.parentElement.parentElement);
 
-    } else if (a === 4) {
-        console.log('비교하려는 값과 일치합니다.');
-    } else if (a === 5) {
-        console.log('비교하려는 값보다 큽니다');
+console.log(fruits.children);
+console.log(fruits.children[0])
+console.log(fruits.children[1])
+console.log(fruits.children[2])
+console.log(fruits.children[3])
 
+// 3. 형제 노드
+const lists = document.querySelectorAll('li');
+console.log(lists);
+const listOrange = lists[2]
+console.log(listOrange.previousElementSibling);
+console.log(listOrange.nextElementSibling);
 
-    } else {
-        console.log('어떤 값인지 파악 안됨')
-    }
-
-    let c= 'green';
-    switch(c) {
-        case 'green':
-            console.log('비교하려는 값과 일치');
-            break;
-        case 'blue':
-            console.log('비교하려는 값보다 큽니다.');
-            break;
-            default:
-                console.log('어떤 값인지 파악 안됨');
-            break;
-    }
-
-    var grade = '0';
-    switch(grade) {
-        case 'A':
-            console.log('학점 A')
-            break;
-        case 'B':
-            console.log('학점 B')
-            break;
-        case 'C':
-            console.log('학점 C')
-            break;
-        case 'D':
-            console.log('학점 D')
-            break;
-
-        case 'F':
-            console.log('학점 F')
-            break;
-        default:
-            console.log('오류 발생')
-            break;
-    }
-
-    //여러 개의 case 문을 묶을 수 있음
-
-    switch(a) {
-        case 4:
-            console.log('비교하려는 값과 일치합니다.');
-            break;
-        case 5 :
-            console.log('비교하려는 값보다 큽니다.');
-            break;
-           default:
-            console.log('어떤 값인지 파악 안됨');
-            break;
-    }
-
-    //#####
-    // 삼항 연산자
-    //- 3개의 피연산자를 필요로 함
-    // 조건식 ? (참일 때 실행할 코드) : (거짓일 때 실행할 코드)
-
-
-    //짝홀 구별
-    var num = 3;
-    if (num % 2 === 0) {
-        console.log('짝수');
-    } else {
-        console.log('홀수');
-    }
-
-    var result = (num % 2 == 0) ? '짝수' : '홀수';
-    console.log(result);
-    console.log(3 > 1 ? 'bigger' : 'smaller');
-
-    //퀴즈)
-
-    let hour = 10;
-    console.log(hour < 13 ? '오전입니다' : '오후입니다');
-
-  var today = new Date();
-
-console.log(new Date);
-
+const numbers = document.querySelector('.numbers');
+console.log(numbers); // ol 
+const numbersTwo = numbers.
+console.log(numbersTwo);
+console.log(numbersTwo.previousElementSibling);
