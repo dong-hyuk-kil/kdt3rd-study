@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+        <label for="meal">Please Select an Entree</label>
+        <select name="meal" id="meal">
+            <option value="fish">Fish</option>
+            <option value="veg">Vegetarian</option>
+            <option value="steak" selected>Steak</option>
+        </select>
+    </p>
+<p>
+    <label for="cheese">Amount of Cheese</label>
+    <input type="range" name="cheese_level" id="cheese" min="1" max="10 ">
+</p>
+
+<p>
+   <label for="requests">Any Speacial Requests?</label>
+   <textarea name="" id="requests" cols="30" rows="10" placeholder="Type Something here  "></textarea> 
+</p>
+
+<h2>Validations Demo</h2>
+<form action="/dummy">
+    <label for="first">Enter First Name</label>
+    <input type="text" name="first" id="first" required>
+    <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="20" required >
+    </p>
+    <button>submit</button>
+
+    <p>
+        <input type="email" required>
+        <input type="url">
+    </p>
+     
+</form>
+</body>
+</html>
