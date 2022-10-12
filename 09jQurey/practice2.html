@@ -41,6 +41,13 @@
         // .bg-red 클래스 있다면, .bg-red 제거, .bg-orange 추가
         // .bg-orange 클래스 있다면, .bg-orange 제거, .bg-yellow 추가
         // .bg-yellow 클래스 있다면, .bg-yellow 제거, .bg-red 추가
+        
+        if($(this).hasClass('bg-red')) {
+            $(this).toggleClass('bg-red');
+            $(this).toggleClass('bg-orange');
+
+        } else if ($(this).hasClass('bg-orange'))
+        
         $('.bg-red').toggleClass('.bg-pink')
         $('.bg-orange').toggleClass('.bg-yellow')
         $('.bg-yellow').toggleClass('.bg-red')
