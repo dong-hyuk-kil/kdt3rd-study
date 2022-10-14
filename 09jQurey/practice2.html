@@ -4,56 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>실습19. 클래스 바꾸기</title>
+    <title>실습18. 이미지 바꾸기</title>
 
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-
-    <style>
-      .box {
-        width: 100px;
-        height: 100px;
-      }
-
-      .bg-red {
-        background-color: red;
-      }
-
-      .bg-orange {
-        background-color: orange;
-      }
-
-      .bg-yellow {
-        background-color: yellow;
-      }
-    </style>
   </head>
   <body>
-    <h1>클래스 바꾸기</h1>
-    <div class="box bg-red"></div>
+    <h1>이미지 바꾸기</h1>
+
+    <img class="fruit" src="./image/q.jpg" alt="" width="300" height="200" />
+    <br />
+    <button class="btn apple" onclick="changeImg('apple')">사과</button>
+    <button class="btn bananas" onclick="changeImg('bananas')">바나나</button>
+    <button class="btn grapes" onclick="changeImg('grapes')">포도</button>
+    <button class="btn peaches" onclick="changeImg('peaches')">복숭아</button>
 
     <script>
-      function changeColor() {
-        // TODO: 조건을 만족하는 jquery 코드 작성
-        // .bg-red 클래스 있다면, .bg-red 제거, .bg-orange 추가
-        // .bg-orange 클래스 있다면, .bg-orange 제거, .bg-yellow 추가
-        // .bg-yellow 클래스 있다면, .bg-yellow 제거, .bg-red 추가
-        
-        if($(this).hasClass('bg-red')) {
-            $(this).toggleClass('bg-red');
-            $(this).toggleClass('bg-orange');
-
-        } else if ($(this).hasClass('bg-orange'))
-        
-        $('.bg-red').toggleClass('.bg-pink')
-        $('.bg-orange').toggleClass('.bg-yellow')
-        $('.bg-yellow').toggleClass('.bg-red')
+      // TODO: 조건을 만족하는 jquery 코드 작성
+      function changeImg(fileName) {
+        // console.log(fileName);
+        $('.fruit').attr('src', `./image/${fileName}.jpg`);
       }
-
-      $('.box').click(changeColor);
     </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+.div-p {
+    
+    display:flex;
+    
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: palegoldenrod;
+    margin: 5px;
+    border-radius: 10%;
+}
+
+/* @media (max-width:992px) {
+    .icon-menu {
+        display:none;
+    }
+
+    .list-menu {
+        display:block;
+    }
+    .toggle-menu {
+        display:none;
+    }
+} */
+
+@media (max-width:700px) {
+    .div-p {
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+
+    .child {
+        background-color: #000;
+    }
+}
