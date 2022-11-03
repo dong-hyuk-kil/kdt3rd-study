@@ -1,0 +1,12 @@
+CREATE DATABASE pra DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
+USE pra;
+
+CREATE TABLE pra (
+    id VARCHAR(20) NOT NULL PRIMARY KEY,
+    name VARCHAR(5) NOT NULL,
+    age INT(2),
+    gender VARCHAR(2) NOT NULL,
+    email VARCHAR(50),
+    promotion VARCHAR(2) NOT NULL DEFAULT 'x'
+);
