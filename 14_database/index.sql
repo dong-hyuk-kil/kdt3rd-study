@@ -164,3 +164,16 @@ UPDATE user SET address = '제주특별자치도 제주시', name = '이지현' 
 -- delete에서는 where절이 항상 따라다님
 DELETE FROM user WHERE id = 11;
 DELETE FROM user WHERE id > 8;
+
+--###############################
+
+SELECT * from u ORDER BY birthday asc;
+SELECT * from u WHERE gender = 'M' ORDER BY name DESC;
+SELECT id,name from u where birthday LIKE '197%';
+SELECT * from u where birthday LIKE '%-06-%' ORDER BY birthday asc;
+SELECT * from u where birthday LIKE '197%' AND gender = 'M';
+SELECT * from u ORDER BY age DESC LIMIT 3;
+SELECT * from u where age BETWEEN 25 and 50;
+update u SET pw = '12345678' where id = 'hong1234';
+delete from u where id = 'jungkrat';
+
