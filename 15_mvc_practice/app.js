@@ -7,7 +7,7 @@ app.use('/views', express.static(__dirname + '/views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const userRouter = require('./routes');
+const userRouter = require('./routes'); //./routes/index 생략 가능
 app.use('/', userRouter);
 
 
