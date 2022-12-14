@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x = true;
+      var y = new Boolean(true);
+
+      console.log(typeof x); // boolean
+      console.log(typeof y); //object
+
+      console.log(Boolean(10 > 9)); //true, object
+      console.log(10 > 9); //true, Boolean
+
+      var x = 0;
+      console.log(x); //0
+      console.log(Boolean(x)); // false , 1이면 true
+
+      var x = //undefined
+        console.log(Boolean(x)); //false 1이 아니면 모두 false
+    </script>
+  </body>
+</html>

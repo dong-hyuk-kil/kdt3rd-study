@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Number
+      var x = 123;
+      //toString() 숫자를 문자열로 변환
+      console.log(x.toString(2));
+
+      //toFixed() 지정된 소수점 자리수까지 반올림으로 표기
+      var x = 123999.563243;
+      console.log(x.toFixed(2));
+
+      //toPrecision() 정수까지 포함한 자리
+      var x = 9.565;
+      console.log(x.toPrecision(2)); //9.6
+
+      var x = Number("10"); // 숫자 10
+      var x = Number(true); // true는 1 false는 0
+      console.log(x); //1
+      console.log(Number("    10   ")); // 공백을 무시하고 숫자만 리턴
+      console.log(Number("10 33")); //NaN
+
+      //parseInt() 문자열을 숫자로. 정수형으로만 리턴
+      console.log(parseInt("3.14")); //3
+      console.log(Number("3.14")); //3.14
+      console.log(parseInt("10 33")); // 10
+      console.log(parseInt("12 years")); // 12
+      console.log(parseInt("years 13")); // NaN
+
+      //parseFlot() 소숫점까지 사용시
+      console.log(parseFloat("10"));
+      console.log(parseFloat("13.9 aa")); //13.9
+    </script>
+  </body>
+</html>

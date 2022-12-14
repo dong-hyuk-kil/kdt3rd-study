@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //if, switch
+
+      /* if(조건) {
+         조건 만족시 수행해야할 코드
+      } 
+      else {
+        조건 불만족시 수행할 코드 
+      }
+      */
+
+      var age = 19;
+      if (age > 18) {
+        console.log("당신은 성인입니다.");
+      } else {
+        console.log("당신은 성인이 아닙니다");
+      }
+
+      var hour = 14;
+      if (hour < 10) {
+        console.log("Good moring");
+      } else if (hour < 18) {
+        console.log("Good afternoon");
+      } else if (hour < 21) {
+        console.log("Good evening");
+      } else {
+        console.log("Good night");
+      }
+
+      var d = new Date();
+      var day = d.getDay();
+      console.log(day);
+      var dayName = "";
+
+      switch (day) {
+        case 0:
+          dayName = "일요일";
+          break;
+        case 1:
+          dayName = "월요일";
+          break;
+        case 2:
+          dayName = "화요일";
+          break;
+        case 3:
+          dayName = "수요일";
+          break;
+
+        default:
+          dayName = "";
+          break;
+      }
+
+      console.log(dayName);
+
+      if (day == 0) {
+        dayName = "일요일";
+      } else if (day == 1) {
+      }
+    </script>
+  </body>
+</html>

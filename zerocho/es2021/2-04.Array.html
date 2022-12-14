@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <script>
+      // <배열에 있는 내장함수>
+
+      //toString()
+      var fruits = ["Banana", "Orange", "Apple"];
+      console.log(fruits.toString()); //Banana,Orange,Apple
+
+      //join()
+      console.log(fruits.join(" * ")); //Banana * Orange * Apple *을 기으로 하나의 문자열 만들
+      var txt = "Banana";
+      txt += "Orange";
+      txt += "Apple";
+
+      var arr = [];
+      arr.push("Banana<br>");
+      arr.push("Orange<br>");
+      arr.push("Apple<br>");
+      document.getElementById("div1").innerHTML = arr.join("<br>");
+
+      //pop() 배열의 가장 마지막 element를 제거
+      //pop() 하면, 제거된 element 리턴
+      var str = fruits.pop();
+      console.log(str); //Apple
+      console.log(fruits); //(2) ['Banana', 'Orange']
+
+      //push() 배열에 마지막에 새 element를 추가
+      fruits.push("kiwi");
+      console.log(fruits); // (3) ['Banana', 'Orange', 'kiwi']
+
+      //shift()
+      //배열의 첫번째 element제거
+      //shift() 리턴으로 제거된 element 반환
+      var str = fruits.shift();
+      console.log(str); //Banana
+      console.log(fruits); //(2) ['Orange', 'kiwi']
+
+      //unshfit()
+      //배열의 첫번째에 새 element 추가
+      fruits.unshift("Lemon");
+      console.log(fruits); // ['Lemon', 'Orange', 'kiwi']
+
+      fruits[0] = "Banana";
+      console.log(fruits); //(3) ['Banana', 'Orange', 'kiwi']
+
+      fruits[fruits.length - 1] = "Lemon";
+      console.log(fruits); //(3) ['Banana', 'Orange', 'Lemon']
+
+      //splice() 배열 중간에 추가
+      //첫번째-시작위치
+      //두번째-삭제할 element의 수
+
+      var fruits = ["Banana", "Orange", "Apple"];
+      fruits.splice(1, 0, "Lemon", "Kiwi");
+      console.log(fruits); // ['Banana', 'Lemon', 'Kiwi', 'Orange', 'Apple']
+      var fruits = ["Banana", "Orange", "Apple"];
+      fruits.splice(1, 1, "Lemon", "Kiwi"); // ) ['Banana', 'Lemon', 'Kiwi', 'Apple']
+      var fruits = ["Banana", "Orange", "Apple"];
+      fruits.splice(1, 1);
+      console.log(fruits); //(2) ['Banana', 'Apple']
+
+      //concat() 배열을 합쳐주는 역할.
+      var myBoys = ["Eunhyeok"];
+      var myGirls = ["Eunseo", "Eunsol"];
+      var myChildren = myBoys.concat(myGirls);
+      console.log(myChildren); //['Eunhyeok', 'Eunseo', 'Eunsol']
+
+      //slice()  배열에서 내가 원하는 그 부분만 잘라서 가지고 옴,
+      //첫번째 시작점 , 두번째는 끝점. 끝점은 포함되지 않음 .
+      var fruits = ["Banana", "Lemon", "Kiwi", "Orange", "Apple "];
+      var fruits2 = fruits.slice(1, 2); // [lemon]
+      var fruits2 = fruits.slice(1, 3); // [Lemon, Kiwi]
+      var fruits2 = fruits.slice(1); // ) ['Lemon', 'Kiwi', 'Orange', 'Apple ']
+
+      //sort() 정렬하기.
+      console.log(fruits.sort()); //알파벳 순으로 오름차순 정렬하기 ['Apple ', 'Banana', 'Kiwi', 'Lemon', 'Orange']
+      var points = [40, 100, 70, 21, 99];
+      console.log(points.sort()); //   [100, 21, 40, 70, 99]
+      points.sort(function (a, b) {
+        // if (a > b) {
+        //   return 1;
+        // } else if (a < b) {
+        //   return -1;
+        // } else {
+        //   return 0;
+        // }
+
+        return a - b; // 동일 코드 오름차순 정렬
+        // return b-a 내림차순 정렬.
+      });
+      console.log(points); //) [21, 40, 70, 99, 100]
+      points.reverse(); //reverse()는 배열 순서를 반대로 정렬.
+      console.log(points); // [100, 99, 70, 40, 21]
+
+      // 배열 안에 object가 들어가 있는 경우.
+
+      var persons = [
+        { name: "유재석", point: 78, city: "서울" },
+        { name: "김종국", point: 92, city: "서울" },
+        { name: "양세찬", point: 76, city: "제주" },
+        { name: "하하", point: 81, city: "서울" },
+      ];
+
+      persons.sort(function (a, b) {
+        // if (a.point > b.point) {
+        //   return 1;
+        // } else if (a.point < b.point) {
+        //   return -1;
+        // } else {
+        //   return 0;
+        // }
+
+        return a.point > b.point ? 1 : a.point < b.point ? -1 : 0; // 같은 코드 (오름차순)
+        return a.point > b.point ? -1 : a.point < b.point ? 1 : 0; // 내림차순 코드
+      });
+
+      console.log(persons); // point를 기준으로 오름차순 정렬 76, 78, 81, 92
+
+      // ★★★★★★★★★★★★★★★★★★
+      //filter() 조건에 맞는  배열만 리턴.
+      var pass = persons.filter(function (person) {
+        // 배열에 들어있는 element들을 person으로 받음.
+        return person.point > 80; //80보다 크면 true
+      });
+      console.log(pass); // pass에는 80점보다 큰 것만 담김.
+
+      var jeju = persons.filter(function (person) {
+        return person.city == "제주";
+      });
+
+      console.log(jeju);
+
+      // filter()를 안쓰는 경우. (동일코드)
+      var jeju = [];
+      for (var i = 0; i < persons.length; i++) {
+        if (persons[i].city == "제주") {
+          jeju.push(persons[i]);
+        }
+      }
+      console.log(jeju);
+
+      // reduce
+      // 파라미터가 4
+      //1.accumulator - 누산기 ; return값이 accumulator에 누적.
+      //2. currentValue - 배열 읽으면서 현재값
+      //3.  i - currentindex ; 안써도됨
+      //4. arr- 전체 배열 return
+      var total = 0;
+      var arr1 = [1, 2, 3, 4];
+      for (var x of arr1) {
+        total += x; // total=total+x
+      }
+      console.log(total); //10
+
+      var total = arr1.reduce(function (a, c, i, arr) {
+        return a + c;
+      });
+      console.log(total); //10
+
+      // ★★★★★★★★★★★★★★★★★★
+      //map
+      //
+      var userList = [
+        { firstName: "재석", lastName: "유", email: "yu@gmail.com" },
+        { firstName: "종국", lastName: "김", email: "kim@gmail.com" },
+        { firstName: "세찬", lastName: "양", email: "yang@gmail.com" },
+        { firstName: "석진", lastName: "지", email: "ji@gmail.com" },
+      ];
+      console.log(userList);
+
+      var userList2 = userList.map(function (user) {
+        // map을 통해서 userList에 있는 것을 user로 받음.
+        return {
+          fullName: user.lastName + user.firstName,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+        };
+      });
+      console.log(userList2); //map을 통해서 fullName이라는 새로운 키를 생성.
+
+      var userList2 = userList.map(function (user) {
+        // map을 통해서 userList에 있는 것을 user로 받음.
+        return {
+          fullName: user.lastName + user.firstName,
+          firstName: user.firstName,
+          lastName: user.lastName,
+        };
+      });
+      console.log(userList2); // map을 통해서 서버에서 받은 정보에서 email을 제거할 수도 있음.
+    </script>
+  </body>
+</html>

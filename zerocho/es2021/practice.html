@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      if (numTwo) {
+        switch (operator) {
+          case "+":
+            $result.value = parseInt(numOne) + parseInt(numTwo);
+            break;
+          case "-":
+            $result.value = numOne - numTwo;
+            break;
+          case "*":
+            $result.value = numOne * numTwo;
+            break;
+          case "/":
+            $result.value = numOne / numTwo;
+            break;
+          default:
+            break;
+        }
+      } else {
+        alert("숫자를 먼저 입력하세요");
+      }
+
+      if (numTwo) {
+        if (operator === "+") {
+          $result.value = parseInt(numOne) + parseInt(numTwo);
+        } else if (operator === "-") {
+          $result.value = numOne - numTwo;
+        } else if (operator === "/") {
+          $result.value = numOne / numTwo;
+        } else if (operator === "*") {
+          $result.value = numOne * numTwo;
+        }
+      } else {
+        alert("숫자를 먼저 입력하세요");
+      }
+
+      let fruit = "사과";
+      if (fruit === "사과") {
+        console.log("사과입니다.");
+      } else if (fruit === "배") {
+        console.log("배입니다");
+      } else if (fruit === "포도") {
+        console.log("포도입니다");
+      } else {
+        console.log("뭔지 모르겠습니다. ");
+      }
+
+      switch (fruit) {
+        default:
+          console.log("뭔지 모르겠습니다!");
+          break;
+        case "사과":
+          console.log("사과입니다!");
+          break;
+        case "배":
+          console.log("배입니다");
+          break;
+        case "포도":
+          console.log("포도입니다");
+          break;
+      }
+    </script>
+  </body>
+</html>
